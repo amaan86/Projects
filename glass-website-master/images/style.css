@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: #426696;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+h2, p{
+    color: #658ec6;
+    font-weight: 500;
+    opacity: 0.8;
+}
+h3{
+    color: #426696;
+    font-weight: 600;
+    opacity: 0.8;
+}
+main{
+    min-height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.glass{
+    font-family: 'Roboto Condensed', sans-serif;
+    background: white;
+    min-height: 80vh;
+    width: 70%;
+    background: linear-gradient(to right bottom,
+    rgba(255,255,255, 0.7), 
+    rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    z-index: 1;
+    display: flex;
+}
+.dashboard{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(to right bottom,
+    rgba(255,255,255, 0.5), 
+    rgba(255, 255, 255, 0.3));
+    border-radius: 2rem;
+    padding: 1rem 0rem 1rem;
+}
+.user img{
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.5s;
+}
+.user img:hover{
+    transform: scale(1.2);
+}
+.user h3{
+    z-index: 1;
+}
+.link{
+    display: flex;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    align-items: center;
+}
+.link h2{
+    padding: 0rem 2rem;
+    cursor: pointer;
+    position: relative;
+}
+.link h2::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    width: 0;
+    height: 2px;
+    background-color: #658ec6;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.link h2:hover::before{
+    visibility: visible;
+    width: 55%;
+}
+.pro{
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    color: white;
+    display: flex;
+    border-radius: 2rem;
+    padding: 1.3rem;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s; 
+}
+.pro:hover{
+    transform: scale(1.1);
+}
+.pro img{
+    position:absolute;
+    top: -20%;
+    right: 6%;
+}
+.pro h2{
+    width: 40%;
+    color: white;
+    font-weight: 600;
+}
+.status{
+    padding: 1rem 0rem;
+    text-align: center;
+}
+.status input{
+    background: linear-gradient(to right bottom,
+    rgba(255,255,255, 0.8), 
+    rgba(255, 255, 255, 0.3));
+    border: none;
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    outline: 0px;
+}
+.games{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1rem 2rem;
+}
+.card{
+    display: flex;
+    background: linear-gradient(to left top,
+    rgba(255,255,255,0.8),
+    rgba(255,255,255,0.5));
+    margin: 2rem 0rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0px 6px 20px 5px rgba(122, 122, 122, 0.2);
+    justify-content: space-between;
+}
+.progress{
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    height: 25%;
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.progress::after{
+    content: "";
+    background: rgb(236, 236, 236);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 60%;
+}
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+.percentage{
+    font-weight: bold;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Animation*/
+.anim-shape {
+    -webkit-transform: scale(0, 1) translate(0, 0);
+    transform: scale(0, 1) translate(0, 0);
+    -webkit-animation: moving-panel 3s;
+    animation: moving-panel 3s;
+    animation-fill-mode: forwards;
+}
+.colortext .anim-shape:nth-child(1) {
+    fill: #00768b; 
+}
+.colortext .anim-shape:nth-child(2) {
+    fill: #166973; 
+}
+.colortext .anim-shape:nth-child(3) {
+    fill: #41a5b3; 
+}
+.colortext .anim-shape:nth-child(4) {
+    fill: #1d8b9e; 
+}
+.colortext .anim-shape:nth-child(5) {
+    fill: #29d2fc; 
+}
+.shadow {
+    -webkit-transform: translate(5px, 5px);
+    transform: translate(5px, 5px); 
+}
+.anim-shape--shadow {
+    fill: #000;
+    fill-opacity: 0.1; 
+}
+@-webkit-keyframes moving-panel {
+    100% {
+        -webkit-transform: scale(2.5, 1) translate(0, 0);
+        transform: scale(2.5, 1) translate(0, 0);
+    } 
+}
+@keyframes moving-panel {
+    100% {
+        -webkit-transform: scale(2.5, 1) translate(0, 0);
+        transform: scale(2.5, 1) translate(0, 0); 
+    } 
+}
+svg {
+    width: 30%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 6.5em; 
+}
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.circles li{
+    position: absolute;
+    background: white;
+    list-style: none;
+    opacity: 0.2;
+    height: 20px;
+    width: 20px;
+    animation: rotate 25s infinite;
+    bottom: -150px;
+}
+.circles li:nth-child(1){
+    left: 10%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+.circles li:nth-child(4){
+    left: 8%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+.circles li:nth-child(5){
+    left: 85%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+.circles li:nth-child(7){
+    left: 7%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+.circles li:nth-child(8){
+    left: 5%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+.circles li:nth-child(9){
+    left: 10%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+@keyframes rotate{
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0%;
+    }
+    100%{
+        transform: translateY(-1200px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
